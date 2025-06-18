@@ -9,9 +9,9 @@ RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Prime numbers and factorization library."
-HOMEPAGE="https://github.com/ruby/prime"
-SRC_URI="https://github.com/ruby/prime/tarball/a5546263bebeb465adaeb6fabda9d8ad447e076f -> prime-0.1.3-a554626.tar.gz"
+DESCRIPTION="An implementation of Matrix and Vector classes"
+HOMEPAGE="https://github.com/ruby/matrix"
+SRC_URI="https://github.com/ruby/matrix/tarball/de06454b6c80e83b98890d433b64422ce9bd49a9 -> matrix-0.4.3-de06454.tar.gz"
 
 KEYWORDS="*"
 LICENSE="|| ( Ruby BSD-2 )"
@@ -22,7 +22,7 @@ ruby_add_bdepend "test? ( dev-ruby/test-unit )"
 
 post_src_unpack() {
 	if [ ! -d "${S}/all/${P}" ] ; then
-		mv "${WORKDIR}"/all/ruby-prime-* "${S}"/all/"${P}" || die
+		mv "${WORKDIR}"/all/ruby-matrix-* "${S}"/all/"${P}" || die
 	fi
 }
 
